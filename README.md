@@ -3,4 +3,6 @@
 
 采用聚合的方式将consumer、provider和api集成在一个project，方便管理。
 
+注册中心采用Zookeeper
+
 ![img](./sources/1589276239.png)
