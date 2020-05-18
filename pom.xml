@@ -18,33 +18,6 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-dubbo</name>
-    <description>Spring Boot集成dubbo案例</description>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.springbootdubbo</groupId>
-            <artifactId>order-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.dubbo.springboot</groupId>
-            <artifactId>spring-boot-starter-dubbo</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <description>Spring Boot集成Dubbo案例</description>
 
 </project>

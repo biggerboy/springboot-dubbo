@@ -1,9 +1,10 @@
 package com.springbootdubbo.api;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.springbootdubbo.model.OrderDetail;
+import org.apache.dubbo.config.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +14,8 @@ import java.util.List;
  * @Date: 2019年9月12日
  */
 @Service
-public class OrderService implements IOrderDetailService{
-    private Logger logger = LoggerFactory.getLogger(OrderService.class);
+public class OrderDetailService implements IOrderDetailService{
+    private Logger logger = LoggerFactory.getLogger(OrderDetailService.class);
     @Override
     public List<OrderDetail> getOrderDetailByOrderId(int orderId) {
         logger.info("orderId:{}",orderId);

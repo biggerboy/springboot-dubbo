@@ -15,6 +15,8 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <spring-boot.version>2.2.6.RELEASE</spring-boot.version>
+        <dubbo.version>2.7.6</dubbo.version>
     </properties>
 
     <dependencies>
@@ -22,11 +24,49 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
+        <!-- Spring Boot DUBBO -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>2.7.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-registry-zookeeper</artifactId>
+            <version>2.7.6</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- 加入此依赖 解决启动报错-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>4.0.1</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- 服务提供者暴露的接口和实体 服务提供者和服务调用者都依赖这个 做成SDK的形式供二者公用-->
+        <dependency>
+            <groupId>com.springbootdubbo</groupId>
+            <artifactId>order-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
+    <repositories>
+        <!--dubbo-spring-boot-starter下载出问题 则加如下仓库地址配置-->
+        <repository>
+            <id>apache.snapshots.https</id>
+            <name>Apache Development Snapshot Repository</name>
+            <url>https://repository.apache.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
